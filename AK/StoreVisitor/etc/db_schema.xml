@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="ak_storevisitor_visitors" resource="default" engine="innodb" comment="ak_storevisitor_visitors Table">
+		<column xsi:type="smallint" name="visitors_id" padding="6" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="visitors_id"/>
+		</constraint>
+		<column name="visitor_id" nullable="true" xsi:type="int" comment="visitor_id" identity="false"/>
+		<column name="store_id" nullable="true" xsi:type="int" comment="store_id" identity="false"/>
+		<column name="store_code" nullable="true" xsi:type="text" comment="store_code"/>
+		<column name="store_name" nullable="true" xsi:type="text" comment="store_name"/>
+		<column name="visitors_count" nullable="true" xsi:type="int" comment="visitors_count" identity="false"/>
+		<column name="updated_at" nullable="true" xsi:type="datetime" comment="updated_at"/>
+	</table>
+</schema>

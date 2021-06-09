@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="StoreVisitor::top_level" title="StoreVisitor" module="AK_StoreVisitor" sortOrder="9999" resource="Magento_Backend::content"/>
+		<add id="AK_StoreVisitor::ak_storevisitor_visitors" title="visitors" module="AK_StoreVisitor" sortOrder="9999" resource="Magento_Backend::content" parent="StoreVisitor::top_level" action="ak_storevisitor/visitors/index"/>
+	</menu>
+</config>

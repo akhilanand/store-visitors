@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="AK_StoreVisitor::visitors" title="visitors" sortOrder="10">
+					<resource id="AK_StoreVisitor::visitors_save" title="Save visitors" sortOrder="10"/>
+					<resource id="AK_StoreVisitor::visitors_delete" title="Delete visitors" sortOrder="20"/>
+					<resource id="AK_StoreVisitor::visitors_update" title="Update visitors" sortOrder="30"/>
+					<resource id="AK_StoreVisitor::visitors_view" title="View visitors" sortOrder="40"/>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

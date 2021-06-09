@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="AK\StoreVisitor\Api\VisitorsRepositoryInterface" type="AK\StoreVisitor\Model\VisitorsRepository"/>
+	<preference for="AK\StoreVisitor\Api\Data\VisitorsInterface" type="AK\StoreVisitor\Model\Data\Visitors"/>
+	<preference for="AK\StoreVisitor\Api\Data\VisitorsSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="AK\StoreVisitor\Model\ResourceModel\Visitors\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">ak_storevisitor_visitors</argument>
+			<argument name="resourceModel" xsi:type="string">AK\StoreVisitor\Model\ResourceModel\Visitors\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="ak_storevisitor_visitors_listing_data_source" xsi:type="string">AK\StoreVisitor\Model\ResourceModel\Visitors\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>
